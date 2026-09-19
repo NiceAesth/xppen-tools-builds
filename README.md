@@ -96,3 +96,7 @@ Reload the rules:
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
+
+Emotional support if you brick your tablet:
+
+https://github.com/user-attachments/assets/43f74e61-474e-4ea8-9b58-a885c2f6690b
