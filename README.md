@@ -41,6 +41,8 @@ xppen-tools dump backup
 
 The only part of the firmware you should ever edit is the `code` section. Anything else will fail to flash and even if it would, you are almost definitely going to brick your tablet.
 
+If you don't have any RE experience use the pre-patched versions in the firmware repo. If your tablet isn't in there wait for one to be added or ask someone that knows what they're doing (I do tablets whenever I feel like it so not me). If you don't know what RE means stick to the pre-patched ones.
+
 Convert an application binary to Intel HEX (format used for flashing after making edits):
 
 ```sh
@@ -99,4 +101,4 @@ sudo udevadm trigger
 
 Emotional support if you brick your tablet:
 
-https://github.com/user-attachments/assets/43f74e61-474e-4ea8-9b58-a885c2f6690b
+<https://github.com/user-attachments/assets/43f74e61-474e-4ea8-9b58-a885c2f6690b>
