@@ -1,8 +1,12 @@
 # xppen-tools builds
 
-Public CI builds of `xppen-tools`. USE AT YOUR OWN RISK. As XDA would put it: "Your warranty is now void. I am not responsible for bricked devices, dead SD cards, or you getting fired because your alarm app failed."
+Public CI builds of `xppen-tools` for XP-Pen and UGEE tablets. USE AT YOUR OWN RISK. As XDA would put it: "Your warranty is now void. I am not responsible for bricked devices, dead SD cards, or you getting fired because your alarm app failed."
 
-Firmware dumps: <https://github.com/NiceAesth/xppen-dumps>
+Firmware dumps + pre-patched versions: <https://github.com/NiceAesth/xppen-dumps>
+
+If your tablet is not in the dump repository, use the commands below to make a backup of your firmware. For extra safety, opening it up is recommended to see if your chip is a Ugee 901, 902, 903 or GD32xxxx. If it is, then it is likely okay to proceed.
+
+The XP-Pen G640 Rev A is currently NOT supported. If you have an updater for this revision or manage to get any form of bootloader dump, contact me and I will add support for it. (plz no useless msgs though)
 
 ## Download
 
@@ -35,6 +39,8 @@ Make a verified firmware backup:
 xppen-tools dump backup
 ```
 
+The only part of the firmware you should ever edit is the `code` section. Anything else will fail to flash and even if it would, you are almost definitely going to brick your tablet.
+
 Convert an application binary to Intel HEX (format used for flashing after making edits):
 
 ```sh
@@ -62,9 +68,9 @@ Slight warning for PID `FFF3` bootloaders, it does not have a DFU exit command. 
 
 Run `xppen-tools --help` for the full command list and options.
 
-Linux may also need udev rules for USB and hidraw access.
-
 ## Linux udev rules
+
+Linux may also need udev rules for USB and hidraw access.
 
 Create `/etc/udev/rules.d/99-xppen.rules`:
 
